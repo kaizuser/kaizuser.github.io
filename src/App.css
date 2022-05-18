@@ -1,19 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Space+Mono&family=Ubuntu+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Space+Mono&family=Titillium+Web:wght@200&family=Ubuntu+Condensed&display=swap');
 
 :root{
 	--font-h2:'Space Mono', monospace;
-	--font-h1:'Josefin Sans', sans-serif;
+	--font-h1:'Titillium Web', sans-serif;
 	--font-p:'Ubuntu Condensed', sans-serif;
+	--font-h3: 'Josefin Sans', sans-serif;
 }
 
 h1 {
 	font-size:4rem;
-	font-family:var(--font-h1)
+	font-family:var(--font-h1);
 }
 
 h2 {
+	font-size:1rem;
+	font-family:var(--font-h2);
+	font-weight:bold;
+}
+
+h3 {
+	font-family:var(--font-h3);
+	font-weight:bold;
 	font-size:1.5rem;
-	font-family:var(--font-h2)
 }
 
 p {
@@ -21,41 +29,246 @@ p {
 	font-family:var(--font-p)
 }
 
-.App {
-  text-align: center;
+.kaizuser-description {
+	max-width:35rem;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top:20rem;
+	text-align:justify;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.project-container {
+	border:1px solid #08F627;
+}
+/*PROJECT ANIMATIONS*/
+
+.cypher-title-animation{
+	overflow: hidden;
+	white-space: nowrap;
+	width: 0;
+	animation: typing steps(30,end) 2s forwards, blink .8s infinite;
+	border-right:2px solid #08f627;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.cypher-content-animation {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: description-typing steps(40,end) 2s forwards, blink .8s infinite;
+    border-right:2px solid #08f627;
+}
+
+.cypher-description-animation {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing steps(30,end) 2s forwards, blink .8s infinite;
+    border-right:2px solid #08f627;
+}
+
+
+@keyframes typing {
+  from { width: 0 }
+  to {width:100%}
+}
+
+@keyframes description-typing {
+  from { width: 0}
+  to {width:100%}
+}
+
+/*HERO BACKGROUND ANIMATION*/
+
+.hero {
+	display: table;
+	width: 100%;
+	min-height: 100vh;
+	background-color: #1C1C1C;
+	color: #000;
+	line-height: 1.6;
+	position: relative;
+	font-family: sans-serif;
+	overflow: hidden;
+}
+
+.lines {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	margin: auto;
+	width: 90vw;
+}
+
+.line {
+	position: absolute;
+	width: 1px;
+	height: 100%;
+	top: 0;
+	left: 50%;
+	background: rgba(255, 255, 255, 0.1);
+	overflow: hidden;
+}
+
+.line::after{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 15vh;
+    width: 100%;
+    top: -50%;
+    left: 0;
+    background: linear-gradient(to bottom, #08F627 0%, #08F627 75%, #ffffff 100%);
+    animation: drop 7s 0s infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+  
+.line:nth-child(1){
+    margin-left: 25%;
+    .line::after {
+      animation-delay: 2s;}
+}
+
+.line:nth-child(2){
+    margin-left: 50%;
+    .line::after {
+      animation-delay: 2s;}
+}
+
+.line:nth-child(3){
+    margin-left: -25%;
+    .line::after {
+      animation-delay: 2s;}
+}
+
+.line:nth-child(4){
+    margin-left: -50%;
+    .line::after {
+      animation-delay: 2s;}
+}
+  
+
+@keyframes drop {
+  0%{
+    top: -50%
+  }
+
+  100% {
+    top: 110%
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/*CSS BUTTONS ANIMATIONS*/
+
+h2,
+h2:after {
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-.App-link {
-  color: #61dafb;
+h2:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  
+  content: 'ALTERNATE TEXT';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #64FFDA 3%, #64FFDA 5%, #64FFDA 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+  clip-path: var(--slice-0);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+h2:hover:after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+h2:hover{
+	background-color:#2b2b2b;
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
   }
-  to {
-    transform: rotate(360deg);
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
   }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .button-49,
+  .button-49:after {
+    width: 200px;
+    height: 86px;
+    line-height: 88px;
+  }
+}
+
+/*MEDIA QUERIES*/
+
+@media(max-width:580px){
+	.nav-text{
+		margin-left:0.5rem!important;
+	}
+}
+
+@media(max-width:1000px){
+	.hero-title{
+		font-size:12.5vw;
+		height:9.5rem;
+	}
 }
