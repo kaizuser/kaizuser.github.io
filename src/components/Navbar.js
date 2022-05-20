@@ -3,15 +3,13 @@ import React from 'react'
 export default function Navbar() {
 	return (
 		<>
-			<header className='w-full h-16 flex justify-center bg-blackMain'>
-				<nav className='w-full m-2 flex justify-center items-center space-x-12'>
-					<h2 className='nav-text text-blueMain cursor-pointer w-20 flex justify-center items-center transition duration-200 ease-in'>&gt; Home</h2>
-					<h2 className='nav-text text-blueMain cursor-pointer w-32 flex justify-center items-center transition duration-200 ease-in'>&gt; Projects</h2>
-					<h2 className='nav-text text-blueMain cursor-pointer w-16 flex justify-center items-center transition duration-200 ease-in'>&gt; XP</h2>
-					<h2 className='nav-text text-blueMain cursor-pointer w-24 flex justify-center items-center transition duration-200 ease-in'>&gt; About</h2>
-				</nav>
+			<nav className='navbar m-2 p-3 flex justify-center items-center space-x-12 z-40 bg-blackMain'>
+				<a href='#home' className='nav-text text-blueMain cursor-pointer w-20 transition duration-200 ease-in'>&gt; Home</a>
+				<a href='#projects' className='nav-text text-blueMain cursor-pointer w-32 transition duration-200 ease-in'>&gt; Projects</a>
+				<a href='#experience' className='nav-text text-blueMain cursor-pointer w-16 transition duration-200 ease-in'>&gt; XP</a>
+				<a href='#about' className='nav-text text-blueMain cursor-pointer w-24 transition duration-200 ease-in'>&gt; About</a>
+			</nav>
 
-			</header>
 		</>
 
 	)

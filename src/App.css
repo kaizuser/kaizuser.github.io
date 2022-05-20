@@ -7,6 +7,21 @@
 	--font-h3: 'Josefin Sans', sans-serif;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color:#1C1C1C;
+}
+
+nav {
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
+	border:.5px solid #18f627
+}
+
 h1 {
 	font-size:4rem;
 	font-family:var(--font-h1);
@@ -29,6 +44,12 @@ p {
 	font-family:var(--font-p)
 }
 
+a {
+	font-size:1rem;
+	font-family:var(--font-h2);
+	font-weight:bold;
+}
+
 .kaizuser-description {
 	max-width:35rem;
 	position: absolute;
@@ -41,15 +62,16 @@ p {
 }
 
 .project-container {
-	border:1px solid #08F627;
+	border:1px solid #2e2d2d;
 }
+
 /*PROJECT ANIMATIONS*/
 
 .cypher-title-animation{
 	overflow: hidden;
 	white-space: nowrap;
 	width: 0;
-	animation: typing steps(30,end) 2s forwards, blink .8s infinite;
+	animation: typing steps(30,end) 1s forwards, unset-border 3.5s forwards;
 	border-right:2px solid #08f627;
 }
 
@@ -57,7 +79,7 @@ p {
     overflow: hidden;
     white-space: nowrap;
     width: 0;
-    animation: description-typing steps(40,end) 2s forwards, blink .8s infinite;
+    animation: description-typing steps(40,end) 1s forwards, unset-border 3.5s forwards;
     border-right:2px solid #08f627;
 }
 
@@ -65,7 +87,7 @@ p {
     overflow: hidden;
     white-space: nowrap;
     width: 0;
-    animation: typing steps(30,end) 2s forwards, blink .8s infinite;
+    animation: typing steps(30,end) 1s forwards, unset-border 3.5s forwards;
     border-right:2px solid #08f627;
 }
 
@@ -78,6 +100,11 @@ p {
 @keyframes description-typing {
   from { width: 0}
   to {width:100%}
+}
+
+@keyframes unset-border {
+  from {border-right:2px solid #08f627}
+  to {border-right:none}
 }
 
 /*HERO BACKGROUND ANIMATION*/
@@ -258,6 +285,99 @@ h2:hover{
   }
 }
 
+a,
+a:after {
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+a:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  
+  content: 'ALTERNATE TEXT';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #64FFDA 3%, #64FFDA 5%, #64FFDA 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+  clip-path: var(--slice-0);
+}
+
+a:hover:after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+a:hover{
+	background-color:#2b2b2b;
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .button-49,
+  .button-49:after {
+    width: 200px;
+    height: 86px;
+    line-height: 88px;
+  }
+}
+
 /*MEDIA QUERIES*/
 
 @media(max-width:580px){
@@ -271,4 +391,34 @@ h2:hover{
 		font-size:12.5vw;
 		height:9.5rem;
 	}
+}
+
+@media(max-width:1600px){
+	.project-container{
+		flex-direction:column;
+		max-width:36.5rem
+	}
+
+	.project-content{
+		margin:0!important;
+		width:100%!important
+	}
+
+
+	.icons-container{
+		flex-direction:column;
+	}
+
+
+	.icons-container > *{
+		margin-top:1rem;
+	}
+	
+}
+
+@media(max-width:600px){
+	.cypher-content-animation{
+		font-size:13px
+	}
+
 }
