@@ -2,12 +2,12 @@
 import './App.css';
 
 // COMPONENTS
-import Navbar from './components/Navbar.js'
-import Hero from './components/Hero.js'
-import About from './components/About.js'
-import Projects from './components/Projects.js'
+import Navbar from './components/Navbar.jsx'
+import Hero from './components/Hero.jsx'
+import About from './components/About.jsx'
+import Projects from './components/Projects/Projects.jsx'
 import Experience from './components/Experience.jsx'
-import Footer from './components/Footer.js'
+import Footer from './components/Footer.jsx'
 
 function App() {
   return (
