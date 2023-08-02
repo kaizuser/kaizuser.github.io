@@ -10,18 +10,17 @@ export default function Tinerary(){
 			<>
 				{tinerary ? 
 				<>
-				<div className='project-content h-full flex justify-between flex-col min-w-[30vw]'>
+				<div className='project-content min-h-full flex justify-around flex-col min-w-[30vw]'>
 					<div className=''>
 						<h2 className='text-blueMain cypher-description-animation'>&gt; Individual Project</h2>
 					</div>
 
 					<div className=''>
 						<h1 className='text-[#ffffff] p-0 cypher-title-animation my-3'>MyTinerary</h1>
-					</div>
 
-					<div className='bg-[#292929] h-auto float-left p-2'>
-						<p className='text-base text-[#ffffff] cypher-content-animation'>Web app about itineraries recommendations. A public API is consumed and the data is proce -</p>
-						<p className='text-base text-[#ffffff] cypher-content-animation'>ssed by filters and calculations.</p>
+						<div className='bg-[#292929] h-auto float-left p-2'>
+							<p className='text-base text-[#ffffff] cypher-content-animation'>Web app about itineraries recommendations. A public API is consumed to get the data. </p>
+						</div>
 					</div>
 
 					<div className='icons-container flex justify-between items-center w-full mt-3'>
@@ -43,7 +42,7 @@ export default function Tinerary(){
 
 						</div>
 
-						<h2 className='text-xs text-blueMain'>React - Jwt/Passport - Express - Redux - NodeJs</h2>
+						<h2 className='text-xs text-blueMain text-center'>React - Jwt/Passport - Express - Redux - NodeJs</h2>
 
 					</div>
 
@@ -56,19 +55,17 @@ export default function Tinerary(){
 				</>
 				:
 				<>
-				<div className='project-content h-full flex justify-between flex-col min-w-[30vw]'>
+				<div className='project-content min-h-full flex justify-around flex-col min-w-[30vw]'>
 					<div className=''>
 						<h2 className='text-blueMain cypher-description-animation'>&gt; Pukpcpkbhs Wyvqlja</h2>
 					</div>
 
 					<div className=''>
-							<h1 className='text-[#ffffff] p-0 cypher-title-animation my-3'>TfApulyhyf</h1>
-					</div>
+						<h1 className='text-[#ffffff] p-0 cypher-title-animation my-3'>TfApulyhyf</h1>
 
-	
-					<div className='bg-[#292929] h-auto float-left p-2'>
-						<p className='text-base text-[#ffffff] cypher-content-animation'>Dli hww hivba papulyhyplz yljvttlukhapvuz. H wbispj HWP pz jvuzbtlk huk aol khak pz wyvjl -</p>
-						<p className='text-base text-[#ffffff] cypher-content-animation'>zzlk if mpsalyz huk jhsjbshapvuz. tlual pnbhs hs vypnpuhs</p>
+						<div className='bg-[#292929] h-auto float-left p-2'>
+							<p className='text-base text-[#ffffff] cypher-content-animation'>Dli hww hivba papulyhyplz yljvttlukhapvuz. H wbispj HWP pz jvuzbtlk huk aol khak pz w.</p>
+						</div>
 					</div>
 
 					<div className='icons-container flex justify-between items-center w-full mt-3'>
@@ -82,7 +79,7 @@ export default function Tinerary(){
 
 						</div>
 
-						<h2 className='text-xs text-blueMain'>Ylhja - Qda/Whzzwvya - lewy    lzz - ylkbe - uvklQz</h2>
+						<h2 className='text-xs text-blueMain text-center'>Ylhja - Qda/Whzzwvya - lewy    lzz - ylkbe - uvklQz</h2>
 
 					</div>
 
@@ -100,7 +97,7 @@ export default function Tinerary(){
 	}
 	return (
 		<>
-			<div className='project-container m-5 min-h-[30vh] flex justify-between items-center p-2 hover:bg-[#303030] transition duration-300 ease-in' onMouseEnter={() => setTinerary(true)} onMouseLeave={() => setTinerary(false)}>
+			<div className='project-container m-5 min-h-[30vh] flex justify-between p-2 hover:bg-[#303030] transition duration-300 ease-in' onMouseEnter={() => setTinerary(true)} onMouseLeave={() => setTinerary(false)}>
 				<MyTinerary/>
 			</div>
 		</>

@@ -63,6 +63,7 @@ a {
 
 .project-container {
 	border:1px solid #2e2d2d;
+	width:70rem;
 }
 
 /*PROJECT ANIMATIONS*/
@@ -396,12 +397,13 @@ a:hover{
 @media(max-width:1600px){
 	.project-container{
 		flex-direction:column;
-		max-width:36.5rem
+		width:36.5rem;
+		align-items: center;
 	}
 
 	.project-content{
 		margin:0!important;
-		width:100%!important
+		width:100%!important;
 	}
 
 
@@ -418,7 +420,16 @@ a:hover{
 
 @media(max-width:600px){
 	.cypher-content-animation{
-		font-size:13px
+		font-size:13px;
+	        white-space: wrap;
+		animation: none;
+		width:auto;
+		overflow: visible;
+		border:none;
 	}
 
+	.project-container{
+		flex-direction:column;
+		width:20rem;
+	}
 }

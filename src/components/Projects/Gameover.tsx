@@ -9,18 +9,18 @@ export default function Gameover(){
 			<>
 				{gameover ? 
 				<>
-				<div className='project-content h-full flex justify-between flex-col min-w-[30vw]'>
+				<div className='project-content min-h-full flex justify-around flex-col min-w-[30vw]'>
 					<div className=''>
 						<h2 className='text-blueMain cypher-description-animation'>&gt; Grupal Project</h2>
 					</div>
 
 					<div className=''>
 						<h1 className='text-[#ffffff] p-0 cypher-title-animation my-3'>GameOver</h1>
-					</div>
 
+						<div className='bg-[#292929] h-auto float-left p-2'>
+							<p className='text-base text-[#ffffff] cypher-content-animation'>E-commerce web app about games. Admin panel, cart, and PayPal payment simulation.</p>
+						</div>
 
-					<div className='bg-[#292929] h-auto float-left p-2'>
-						<p className='text-base text-[#ffffff] cypher-content-animation'>E-commerce web app about games. Admin panel, cart, and PayPal payment simulation.</p>
 					</div>
 
 					<div className='icons-container flex justify-between items-center w-full mt-3'>
@@ -43,7 +43,7 @@ export default function Gameover(){
 
 						</div>
 
-						<h2 className='text-xs text-blueMain'>React - ReactNative - Express - Redux - NodeJs - Socket.IO</h2>
+						<h2 className='text-xs text-blueMain text-center'>React - ReactNative - Express - Redux - NodeJs - Socket.IO</h2>
 
 					</div>
 
@@ -56,17 +56,16 @@ export default function Gameover(){
 				</>
 				:
 				<>
-				<div className='project-content h-full flex justify-between flex-col min-w-[30vw]'>
+				<div className='project-content min-h-full flex justify-around flex-col min-w-[30vw]'>
 					<div className=''>
 						<h2 className='text-blueMain cypher-description-animation'>&gt; Nybwhs Wyvqlja</h2>
 					</div>
 
 					<div className=''>
 						<h1 className='text-[#ffffff] p-0 cypher-title-animation my-3'>NhtlVcly</h1>
-					</div>
-
-					<div className='bg-[#292929] h-auto float-left p-2'>
-						<p className='text-base text-[#ffffff] cypher-content-animation'>L-jvttlyjl dli hww hivba nhtlz. Hktpu whuls, jhya, huk WhfWhs whftlua zptbshapvu.</p>
+						<div className='bg-[#292929] h-auto float-left p-2'>
+							<p className='text-base text-[#ffffff] cypher-content-animation'>L-jvttlyjl dli hww hivba nhtlz. Hktpu whuls, jhya, huk WhfWhs whftlua zptbshapvu asda.</p>
+						</div>
 					</div>
 
 					<div className='icons-container flex justify-between items-center w-full mt-3'>
@@ -80,7 +79,7 @@ export default function Gameover(){
 
 						</div>
 
-						<h2 className='text-xs text-blueMain'>Ylhja - YlhjaUhapcl - Lewylzz - Ylkbe - UvklQz - Zvjrla.PV</h2>
+						<h2 className='text-xs text-blueMain text-center'>Ylhja - YlhjaUhapcl - Lewylzz - Ylkbe - UvklQz - Zvjrla.PV</h2>
 
 					</div>
 
@@ -99,7 +98,7 @@ export default function Gameover(){
 
 	return (
 		<>
-			<div className='project-container m-5 min-h-[30vh] flex justify-between items-center p-2 hover:bg-[#303030] transition duration-300 ease-in' onMouseEnter={() => setGameover(true)} onMouseLeave={() => setGameover(false)}>
+			<div className='project-container m-5 min-h-[30vh] flex justify-between p-2 hover:bg-[#303030] transition duration-300 ease-in' onMouseEnter={() => setGameover(true)} onMouseLeave={() => setGameover(false)}>
 				<GameOver/>
 			</div>
 		</>

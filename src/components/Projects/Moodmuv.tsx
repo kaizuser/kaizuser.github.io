@@ -9,18 +9,17 @@ export default function Moodmuv(){
 			<>
 				{moodmuv ? 
 				<>
-				<div className='project-content h-full flex justify-between flex-col min-w-[30vw]'>
+				<div className='project-content min-h-full flex justify-around flex-col min-w-[30vw]'>
 					<div className=''>
-						<h2 className='text-blueMain cypher-description-animation'>&gt; Partners Project (2 developers)</h2>
+						<h2 className='text-blueMain cypher-description-animation'>&gt; Partners Project</h2>
 					</div>
 
 					<div className=''>
 						<h1 className='text-[#ffffff] p-0 cypher-title-animation my-3'>Moodmuv</h1>
-					</div>
 
-
-					<div className='bg-[#292929] h-auto float-left p-2'>
-						<p className='text-base text-[#ffffff] cypher-content-animation'>Educative platform for people who want to enter to the fitness world.</p>
+						<div className='bg-[#292929] h-auto float-left p-2 flex flex-wrap'>
+							<p className='text-base text-[#ffffff] cypher-content-animation'>Educative platform for people who want to enter to the fitness world.</p>
+						</div>
 					</div>
 
 					<div className='icons-container flex justify-between items-center w-full mt-3'>
@@ -32,9 +31,17 @@ export default function Moodmuv(){
 								</svg>
 							</a>
 
+							<a href='https://moodmuv.cl/'> 
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className='text-blueMain hover:text-[#ffffff] transition duration-300 ease-in' viewBox="0 0 16 16">
+								  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+								  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+								</svg>
+
+							</a>
+
 						</div>
 
-						<h2 className='text-xs text-blueMain'>React - Redux - NodeJs - Typescript - Express - Mocha</h2>
+						<h2 className='text-xs text-blueMain text-center'>React - Redux - NodeJs - Typescript - Express - Mocha</h2>
 
 					</div>
 
@@ -47,17 +54,17 @@ export default function Moodmuv(){
 				</>
 				:
 				<>
-				<div className='project-content h-full flex justify-between flex-col min-w-[30vw]'>
+				<div className='project-content min-h-full flex justify-around flex-col min-w-[30vw]'>
 					<div className=''>
-						<h2 className='text-blueMain cypher-description-animation'>&gt; Nybwhs Wyvqlja</h2>
+						<h2 className='text-blueMain cypher-description-animation'>&gt; Whyaulyz Wyvqlja</h2>
 					</div>
 
 					<div className=''>
 						<h1 className='text-[#ffffff] p-0 cypher-title-animation my-3'>NhtlVcly</h1>
-					</div>
 
-					<div className='bg-[#292929] h-auto float-left p-2'>
-						<p className='text-base text-[#ffffff] cypher-content-animation'>L-jvttlyjl dli hww hivba nhtlz. Hktpu whuls, jhya, huk WhfWhs whftlua zptbshapvu.</p>
+						<div className='bg-[#292929] h-auto float-left p-2'>
+							<p className='text-base text-[#ffffff] cypher-content-animation'>Lkbjhapcl wshamvyt mvy wlvwsl dov dhua av lualy av aol mpaulzz dvy.</p>
+						</div>
 					</div>
 
 					<div className='icons-container flex justify-between items-center w-full mt-3'>
@@ -71,7 +78,7 @@ export default function Moodmuv(){
 
 						</div>
 
-						<h2 className='text-xs text-blueMain'>Ylhja - YlhjaUhapcl - Lewylzz - Ylkbe - UvklQz - Zvjrla.PV</h2>
+						<h2 className='text-xs text-blueMain text-center'>Ylhja - Ylkbe - UvklQz - Afwlzjypwa - Lewylzz - Tvjoh</h2>
 
 					</div>
 
@@ -90,7 +97,7 @@ export default function Moodmuv(){
 
 	return (
 		<>
-			<div className='project-container m-5 min-h-[30vh] flex justify-between items-center p-2 hover:bg-[#303030] transition duration-300 ease-in' onMouseEnter={() => setMoodmuv(true)} onMouseLeave={() => setMoodmuv(false)}>
+			<div className='project-container m-5 min-h-[30vh] flex justify-between p-2 hover:bg-[#303030] transition duration-300 ease-in' onMouseEnter={() => setMoodmuv(true)} onMouseLeave={() => setMoodmuv(false)}>
 				<Moodmuv/>
 			</div>
 		</>

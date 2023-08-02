@@ -9,18 +9,18 @@ export default function Petshop(){
 			<>
 				{petshop ? 
 				<>
-				<div className='project-content h-full flex justify-between flex-col min-w-[30vw]'>
+				<div className='project-content min-h-full flex justify-around flex-col min-w-[30vw]'>
 					<div className=''>
 						<h2 className='text-blueMain cypher-description-animation'>&gt; Grupal Project</h2>
 					</div>
 
 					<div className=''>
 						<h1 className='text-[#ffffff] p-0 cypher-title-animation my-3'>PetShop</h1>
-					</div>
 
+						<div className='bg-[#292929] h-auto float-left p-2'>
+							<p className='text-base text-[#ffffff] cypher-content-animation'>Web app based in a traditional petshop, where you can choose and add products to your cart.</p>
+						</div>
 
-					<div className='bg-[#292929] h-auto float-left p-2'>
-						<p className='text-base text-[#ffffff] cypher-content-animation'>Web app based in a traditional petshop, where you can choose and add products to your cart.</p>
 					</div>
 
 					<div className='icons-container flex justify-between items-center w-full mt-3'>
@@ -33,7 +33,7 @@ export default function Petshop(){
 
 						</div>
 
-						<h2 className='text-xs text-blueMain'>HTML5 - CSS - API'S - Neovim</h2>
+						<h2 className='text-xs text-blueMain text-center'>HTML5 - CSS - API'S - Neovim</h2>
 
 					</div>
 
@@ -45,19 +45,19 @@ export default function Petshop(){
 				</>
 				:
 				<>
-				<div className='project-content m-auto h-full flex justify-between flex-col min-w-[30vw]'>
+				<div className='project-content min-h-full flex justify-around flex-col min-w-[30vw]'>
 					<div className=''>
 						<h2 className='text-blueMain cypher-description-animation'>&gt; Nybwhs Wyvqlja</h2>
 					</div>
 
 					<div className=''>
 						<h1 className='text-[#ffffff] p-0 cypher-title-animation my-3'>WlaZovw</h1>
+
+						<div className='bg-[#292929] h-auto float-left p-2'>
+							<p className='text-base text-[#ffffff] cypher-content-animation'>Dli hww ihzlk pu h ayhkpapvuhs wlazovw, dolyl fvb jhu jovvzl huk hkk wyvkbjaz av fvby jhya.</p>
+						</div>
 					</div>
 
-
-					<div className='bg-[#292929] h-auto float-left p-2'>
-						<p className='text-base text-[#ffffff] cypher-content-animation'>Dli hww ihzlk pu h ayhkpapvuhs wlazovw, dolyl fvb jhu jovvzl huk hkk wyvkbjaz av fvby jhya.</p>
-					</div>
 
 					<div className='icons-container flex justify-between items-center w-full mt-3'>
 						<div className='space-x-5 flex items-center justify-center'>
@@ -66,7 +66,7 @@ export default function Petshop(){
 							</svg>
 						</div>
 
-						<h2 className='text-xs text-blueMain'>OATS5 - JZZ - HWP'Z - Ulvcpt</h2>
+						<h2 className='text-xs text-blueMain text-center'>OATS5 - JZZ - HWP'Z - Ulvcpt</h2>
 
 					</div>
 
@@ -83,7 +83,7 @@ export default function Petshop(){
 
 	return (
 		<>
-			<div className='project-container m-5 min-h-[30vh] flex justify-between items-center p-2 hover:bg-[#303030] transition duration-300 ease-in' onMouseEnter={() => setPetshop(true)} onMouseLeave={() => setPetshop(false)}>
+			<div className='project-container m-5 min-h-[30vh] flex justify-between p-2 hover:bg-[#303030] transition duration-300 ease-in' onMouseEnter={() => setPetshop(true)} onMouseLeave={() => setPetshop(false)}>
 				<PetShop/>
 			</div>
 		</>
